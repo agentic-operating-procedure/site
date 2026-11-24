@@ -1,0 +1,42 @@
+name: sync-estate
+
+# Pull the estate artefacts into data/ on a schedule and on any estate push.
+# Estate repos send a repository_dispatch on their own pushes; the schedule
+# catches everything else. Then Pages deploys the refreshed site.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # every 6 hours
+  repository_dispatch:
+    types: [estate-push]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml
+      - name: Pull the estate and rebuild data/
+        run: python3 tools/sync.py
+      - name: Regenerate the pages
+        run: python3 tools/build_pages.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "aop-site-sync"
+          git config user.email "site-sync@users.noreply.github.com"
+          git add data/ *.html
+          if git diff --cached --quiet; then echo "no changes"; else
+            git commit -m "Sync estate artefacts ($(date -u +%F))"
+            git push
+          fi
+      - name: Trigger the deploy workflow
+        run: |
+          gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

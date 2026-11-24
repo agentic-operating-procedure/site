@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Index — Agentic Operating Procedure</title>
+<meta name="description" content="The governance layer for delegated operational execution by agents: specifications, live tools, and a worked 5G exemplar.">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Ctext x='16' y='21' font-family='Arial' font-size='13' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="hero">
+  <span class="pill">The governance layer for delegated operational execution</span>
+  <h1>Agentic Operating Procedure</h1>
+  <p class="lead">An engineering and operational blueprint for specifying, governing and assuring operational execution by agents that interpret context and act. The purpose is to make delegated operational execution inspectable: to state, before execution, who may decide what, under which constraints, and with what proof of outcome.</p>
+  <p style="margin-top:24px">
+    <a class="btn primary" href="concepts.html">Read the concepts</a>
+    <a class="btn" href="playground.html">Try the Guardrail Playground</a>
+    <a class="btn" href="https://github.com/agentic-operating-procedure" target="_blank" rel="noopener">GitHub organisation</a>
+  </p>
+  <div id="versions" style="margin-top:28px; display:flex; gap:8px; flex-wrap:wrap"></div>
+</div>
+
+<div class="grid cols-3">
+  <div class="card"><h3>Specify</h3><p>Eight mandatory dimensions, network-native procedure structure, decision-rights ladder over five risk axes, identifiers and provenance. An AOP that omits a dimension is not an AOP.</p><a href="specification.html">The normative specification &rarr;</a></div>
+  <div class="card"><h3>Govern</h3><p>Authority lives outside the model context. The agent proposes; the guardrail disposes. Ratified rules only. Fail closed on unknowns. Short-lived scoped credentials. Append-only, replayable case records.</p><a href="concepts.html#trust">The trust architecture &rarr;</a></div>
+  <div class="card"><h3>Assure</h3><p>Conformance profiles for documents and harnesses with deliberately broken must-fail fixtures. Shadow-mode evaluation against the human baseline. Certificates carry the tier and the digest.</p><a href="estate.html">The estate &rarr;</a></div>
+</div>
+
+<h2>Try the framework, live</h2>
+<p>These tools run the real engines in your browser: the same schema checks, the same normative clauses, the same guardrail decision sequence as the certified reference implementation. Nothing is mocked.</p>
+<div class="grid cols-2">
+  <div class="card"><h3>Guardrail Playground</h3><p>Edit the case facts and watch the authority decision change. Tamper a fact, propose an out-of-permitted action, flood a budget: the guardrail answers as production would.</p><a href="playground.html">Open the playground &rarr;</a></div>
+  <div class="card"><h3>AOP Validator</h3><p>Paste or edit an AOP document and get the clause-level diagnostics: completeness, decision specificity, authority coverage, provenance, ratification, reversibility.</p><a href="validator.html">Open the validator &rarr;</a></div>
+  <div class="card"><h3>Pipeline Visualizer</h3><p>Walk the observe, model, compile, execute loop on the 5G exemplar: 45 observed cases becoming variants, decision rules with thresholds, and governed runs.</p><a href="visualizer.html">Open the visualizer &rarr;</a></div>
+  <div class="card"><h3>Exemplar Replay</h3><p>Step through a governed run decision by decision: variant matched, rule applied with provenance, approval routed with an evidence bundle, case record appended.</p><a href="replay.html">Open the replay &rarr;</a></div>
+</div>
+
+<h2>The estate at a glance</h2>
+<p>Fourteen repositories, one authority each, published under MIT. The interactive site is auto-synced from their main branches: schemas, fixtures, the exemplar corpus and the coverage map are pulled, not copied.</p>
+<div class="grid cols-3">
+  <div class="card"><h3>Certified Enforced</h3><p>The reference harness passes 25 behavioural checks including poisoned-context authority injection and case-record tamper detection.</p></div>
+  <div class="card"><h3>Adversarially tested</h3><p>Must-reject fixtures: untrusted-grounded authority, republished unratified rules, append-only retraction, payload smuggling, proposer flooding.</p></div>
+  <div class="card"><h3>Openly published</h3><p>Every claim cites its artefact digest, profile version and cohort. Where evidence is missing, the coverage map says so.</p></div>
+</div>
+
+<script type="module" src="js/shell.js"></script><script type="module" src="js/js/shell.js.js"></script><script type="module" src="js/js/render-pages.js.js"></script>
+</body>
+</html>

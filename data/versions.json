@@ -1,0 +1,72 @@
+{
+  ".github": {
+    "version": "0.1.0",
+    "head": "c3db236",
+    "pushed": "2026-11-24"
+  },
+  "aop-governance": {
+    "version": "0.2.0",
+    "head": "52bde46",
+    "pushed": "2026-11-24"
+  },
+  "aop-foundations": {
+    "version": "0.2.0",
+    "head": "e7214d7",
+    "pushed": "2026-11-24"
+  },
+  "aop-landscape": {
+    "version": "0.1.1",
+    "head": "7f1a9fa",
+    "pushed": "2026-11-24"
+  },
+  "aop-spec": {
+    "version": "0.6.0",
+    "head": "20ec3b1",
+    "pushed": "2026-11-24"
+  },
+  "aop-architecture": {
+    "version": "0.3.0",
+    "head": "773ec28",
+    "pushed": "2026-11-24"
+  },
+  "aop-context-graph": {
+    "version": "0.3.0",
+    "head": "0de29b7",
+    "pushed": "2026-11-24"
+  },
+  "aop-toolkit": {
+    "version": "0.3.0",
+    "head": "a7a68c2",
+    "pushed": "2026-11-24"
+  },
+  "aop-reference-harness": {
+    "version": "0.5.0",
+    "head": "5b015ab",
+    "pushed": "2026-11-24"
+  },
+  "aop-registry": {
+    "version": "0.2.1",
+    "head": "22557e0",
+    "pushed": "2026-11-24"
+  },
+  "aop-conformance": {
+    "version": "0.5.0",
+    "head": "27368e5",
+    "pushed": "2026-11-24"
+  },
+  "aop-evaluation": {
+    "version": "0.3.0",
+    "head": "a22dbcd",
+    "pushed": "2026-11-24"
+  },
+  "aop-adoption": {
+    "version": "0.2.0",
+    "head": "22175a4",
+    "pushed": "2026-11-24"
+  },
+  "aop-examples": {
+    "version": "0.4.0",
+    "head": "aef2858",
+    "pushed": "2026-11-24"
+  }
+}

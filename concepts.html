@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concepts — Agentic Operating Procedure</title>
+<meta name="description" content="The governance layer for delegated operational execution by agents: specifications, live tools, and a worked 5G exemplar.">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Ctext x='16' y='21' font-family='Arial' font-size='13' font-weight='800' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="hero"><h1>Concepts</h1>
+<p class="lead">The six-level hierarchy, the eight mandatory dimensions, the governing principle, and the trust architecture.</p></div>
+
+<h2>The six-level hierarchy</h2>
+<div id="hierarchy"></div>
+
+<h2>The eight mandatory dimensions</h2>
+<p>Every AOP populates all eight. An AOP that omits one is not a degraded AOP; it is not an AOP.</p>
+<div id="dimensions" class="grid cols-2"></div>
+
+<h2 id="trust">The trust architecture</h2>
+<p>Four assurance mechanisms, and the order matters: prevent is structural, verify is independent, oversee is human, audit is total.</p>
+<div id="trust" class="grid cols-2"></div>
+
+<h2>The governing principle</h2>
+<div class="card"><h3>The procedure governs the agent</h3>
+<p>The agent operates within the authority, the constraints and the assurance requirements the AOP establishes. It cannot self-authorise: the authority check is performed by a component outside the model context, so the agent cannot influence the outcome of the check that governs it.</p>
+<p>This is the single technical commitment on which the rest of the estate rests. Every other design decision is downstream of it.</p></div>
+
+<h2>The compile-and-run loop</h2>
+<pre>   observe --&gt; model --&gt; compile --&gt; execute
+      ^                               |
+      |                               v
+      +--------- observed cases &lt;--- evidence</pre>
+<p>Execution evidence becomes new observation; the AOP stays true to the work because it is continuously re-derived from the work. Loop hygiene rules (origin tagging, the protected human reservoir) keep the baseline from learning the agent's own behaviour.</p>
+
+<h2>Relationship to the Zero-Trust Agent Framework</h2>
+<p><a href="https://github.com/Zero-TAF" target="_blank" rel="noopener">Zero-TAF</a> is the recognised trust framework whose runtime realisation AOP profiles: Zero-TAF defines the trust semantics (no implicit trust; the decision as the protected unit; per-task signed mandates); this programme binds them into procedural execution. The mapping direction is one-way and recorded in <a href="https://github.com/agentic-operating-procedure/aop-governance" target="_blank" rel="noopener">aop-governance</a> (CR-038).</p>
+
+<script type="module" src="js/shell.js"></script><script type="module" src="js/js/shell.js.js"></script><script type="module" src="js/js/render-pages.js.js"></script>
+</body>
+</html>
