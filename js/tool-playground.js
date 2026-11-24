@@ -3,7 +3,7 @@
 // (untrusted fact tampering, out-of-permitted actions, flood, duplicates)
 // are one click each. Everything you see is the certified decision sequence.
 import { el, renderShell } from './shell.js';
-import { Guardrail, evaluateCondition, ACTION_CLASSES, DECISION } from './aop-engine.js';
+import { Guardrail, ACTION_CLASSES } from './aop-engine.js';
 
 renderShell('playground.html');
 
@@ -36,12 +36,15 @@ function render() {
   decision = guardrail.irreversibilityVerdict(action, decision);
   const budget = guardrail.budgetVerdict(action, state.usage);
   const pfail = guardrail.parameterVerdict(action, params);
-  const digest = await_digest(action, params);
-
   const [tone, label] = decisionTone(decision.decision);
   verdictBox.className = `verdict ${tone}`;
   verdictBox.textContent = `${label} — ${action}`;
 
+  digestOf(action, params).then((d) => {
+    const li = el('li', { class: 'info' }, [`action digest: ${d.slice(0, 27)}... (RA-5)`]);
+    ruleBox.querySelectorAll('.digest-row').forEach((n) => n.remove());
+    ruleBox.append(li);
+  });
   ruleBox.replaceChildren(
     el('li', { class: 'info' }, [match.note]),
     el('li', { class: 'info' }, [`variant: ${variant ? variant.id : 'none (fail closed)'}`]),
@@ -54,14 +57,11 @@ function render() {
   );
 }
 
-async function await_digest(action, params) {
-  const { sha256Hex } = await import('./aop-engine.js');
-  return Guardrail.actionDigest ? await digestOf(action, params) : '';
-}
 async function digestOf(action, params) {
   const { Guardrail: G } = await import('./aop-engine.js');
   return G.actionDigest(action, null, params);
 }
+let digest = '';  // filled asynchronously in render
 
 function commit(action, decision) {
   state.history.unshift({ action, decision: decision.decision, at: new Date().toLocaleTimeString() });
