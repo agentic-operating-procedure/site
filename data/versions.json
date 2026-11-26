@@ -6,8 +6,8 @@
   },
   "aop-governance": {
     "version": "0.2.0",
-    "head": "e1f594e",
-    "pushed": "2026-11-24"
+    "head": "b9493ec",
+    "pushed": "2026-11-26"
   },
   "aop-foundations": {
     "version": "0.2.0",
@@ -31,13 +31,13 @@
   },
   "aop-context-graph": {
     "version": "0.3.0",
-    "head": "0de29b7",
-    "pushed": "2026-11-24"
+    "head": "5cf5859",
+    "pushed": "2026-11-26"
   },
   "aop-toolkit": {
     "version": "0.3.0",
-    "head": "a7a68c2",
-    "pushed": "2026-11-24"
+    "head": "a98b35d",
+    "pushed": "2026-11-26"
   },
   "aop-reference-harness": {
     "version": "0.5.0",
@@ -61,8 +61,8 @@
   },
   "aop-adoption": {
     "version": "0.2.0",
-    "head": "22175a4",
-    "pushed": "2026-11-24"
+    "head": "ef6fcf7",
+    "pushed": "2026-11-26"
   },
   "aop-examples": {
     "version": "0.4.0",
