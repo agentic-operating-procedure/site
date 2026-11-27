@@ -36,8 +36,8 @@
   },
   "aop-toolkit": {
     "version": "0.3.0",
-    "head": "a98b35d",
-    "pushed": "2026-11-26"
+    "head": "b54f494",
+    "pushed": "2026-11-27"
   },
   "aop-reference-harness": {
     "version": "0.5.0",
